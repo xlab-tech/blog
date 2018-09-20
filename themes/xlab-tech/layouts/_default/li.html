@@ -1,0 +1,19 @@
+{{ if .Params.featured }}
+<article class="post {{ .Section }} featured item">
+{{ else }}
+<article class="post {{ .Section }} item">
+{{ end }}
+	<div class="post-inner">
+		{{ if .Params.image }}
+		<figure class="post-image">
+			<img src="{{ .Site.BaseURL }}/images/{{ .Params.image }}" alt="{{ .Params.imageAlt }}" />
+		</figure>
+		{{ end }}
+		<span class="post-meta">
+			<span class="post-date">{{ .Date.Format "2 Jan 2006" }}</span>
+		</span>
+		<h2 class="post-title">{{ .Title }}</h2>
+		<p class="post-excerpt">{{ .Summary }}</p>
+		<span class="post-more"><a href="{{ .Permalink }}">Read more <i class="fa fa-angle-right"></i></a></span>
+	</div>
+</article>

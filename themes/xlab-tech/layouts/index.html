@@ -1,0 +1,9 @@
+{{ define "main" }}
+  <div class="post-list gallery">
+    {{ $paginator := .Paginate (where .Site.Pages "Section" "in" .Site.Params.mainSections) }}
+    {{ range $index, $page := $paginator.Pages }}
+      {{ .Render "li" }}
+    {{ end }}
+  </div>
+  {{ partial "pagination.html" (dict "paginator" $paginator "site" .Site ) }}
+{{ end }}

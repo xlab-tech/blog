@@ -1,4 +1,27 @@
-baseURL = "http://www.trantorsystem.com/"
+baseURL = "http://localhost:1313/"
 languageCode = "es-ES"
-title = "xLab Blog"
-theme = "ananke"
+theme = "xlab-tech"
+footnoteReturnLinkContents = "↩"
+
+[params]
+  SidebarRecentLimit = 5
+  Subtitle = "A permanent blog"
+  description = "Everything is awesome!"
+  cover = "/images/xlab-cover.jpg"
+  [params.author]
+    firstName = "xLab tech"
+    lastName = "team"
+    gender = "(fe)?male"
+    userName = "xLab-tech-team"
+    image = "/images/avatar.jpg"
+    website = ""
+    twitter = ""
+    github = ""
+    facebook = ""
+    linkedin = ""
+    gplus = ""
+
+[permalinks]
+  post = "/:year/:month/:title/"
+
+  

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="24px" viewBox="0 0 32 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>menu</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="XLAB-iPad" transform="translate(-968.000000, -29.000000)" fill="#FFFFFF">
+            <g id="menu" transform="translate(968.000000, 29.000000)">
+                <path d="M29.5,21 L1.5,21 C0.672,21 0,21.672 0,22.5 C0,23.329 0.672,24 1.5,24 L29.5,24 C30.329,24 31,23.329 31,22.5 C31,21.672 30.329,21 29.5,21" id="Fill-162"></path>
+                <path d="M29.676,11.032 L1.676,11.032 C0.848,11.032 0.176,11.704 0.176,12.532 C0.176,13.361 0.848,14.032 1.676,14.032 L29.676,14.032 C30.505,14.032 31.176,13.361 31.176,12.532 C31.176,11.704 30.505,11.032 29.676,11.032" id="Fill-162"></path>
+                <path d="M29.5,0 L1.5,0 C0.672,0 0,0.672 0,1.5 C0,2.329 0.672,3 1.5,3 L29.5,3 C30.329,3 31,2.329 31,1.5 C31,0.672 30.329,0 29.5,0" id="Fill-162"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <div class="post-list">
+    <div id="push">
+
+      {{ $paginator := .Paginator }}
+
+      {{ range $index, $page := .Paginator.Pages }}
+        {{ .Render "li" }}
+      {{ end }}
+
+    </div>
+  </div>
+
+  {{ partial "pagination.html" (dict "paginator" $paginator "site" .Site ) }}
+{{ end }}
