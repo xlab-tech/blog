@@ -2,6 +2,9 @@ baseURL = "http://localhost:1313/"
 languageCode = "es-ES"
 theme = "xlab-tech"
 footnoteReturnLinkContents = "↩"
+buildExpired = false
+buildFuture = false
+buildDrafts = false
 
 [params]
   sidebarRecentLimit = 5
@@ -15,9 +18,9 @@ footnoteReturnLinkContents = "↩"
     gender = "(fe)?male"
     userName = "xLab-tech-team"
     image = "/images/avatar.jpg"
-    website = ""
+    website = "https://xlab.tech"
     twitter = ""
-    github = ""
+    github = "https://github.com/xlab-tech"
     facebook = ""
     linkedin = ""
     gplus = ""
@@ -25,4 +28,7 @@ footnoteReturnLinkContents = "↩"
 [permalinks]
   post = "/:year/:month/:title/"
 
+[taxonomies]
+  category = "categories"
+  tag = "tags"
   
