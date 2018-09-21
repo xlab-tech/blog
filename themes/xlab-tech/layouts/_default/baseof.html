@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/styles.css">
   </head>
   <body>
+    {{ partial "menu.html" .}}
     <section id="content" class="content">
       {{ block "header" . }}{{ partial "header.html" .}}{{ end }}
       <main id="main" class="main" role="main">

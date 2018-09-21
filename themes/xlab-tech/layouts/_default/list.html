@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <div class="post-list">
+  <div class="post-list list">
     <div id="push">
 
       {{ $paginator := .Paginator }}
@@ -12,4 +12,5 @@
   </div>
 
   {{ partial "pagination.html" (dict "paginator" $paginator "site" .Site ) }}
+  
 {{ end }}

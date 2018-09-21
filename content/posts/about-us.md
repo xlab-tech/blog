@@ -2,7 +2,7 @@
 title: "About Us"
 date: 2018-09-20T14:26:15+02:00
 draft: true
-image: "xlab-cover.jpg"
+image: "5.jpg"
 imageAlt: "About Us"
 ---
 

@@ -8,7 +8,7 @@ body {
   margin: 0;
 }
 body {
-  background-image: url('../images/xlab-cover.jpg');
+  background-image: url('../images/jason-wong-352463-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -16,6 +16,7 @@ body {
   font-size: 16PX;
   font-weight: 300;
   color: #333333;
+  position: relative;
 }
 h1,
 h2,
@@ -49,40 +50,54 @@ ol {
 }
 
 /* HEADER */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 10;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 8rem;
-}
 #logo {
   display: inline-block;
   margin: 1%;
-  max-width: 200px;
   background-color: white;
   padding: 0.5rem 1rem;
+  min-width: 200px;
 }
 #logo img {
-  max-width: 100%;
+  max-width: 200px;
 }
 .header-menu-btn {
   display: flex;
   background-color: #D84483;
   color: white;
   padding: 1rem;
-  margin-right: 2rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 12;
+}
+.header-menu-panel {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: fixed;
+  font-size: 20px;
+  top: 0;
+  right: -50%;
+  opacity: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 2rem;
+  padding-top: 5rem;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-width: 100px;
+  transition: all 0.5s ease-out;
+}
+.header-menu-panel.active {
+  right: 0;
+  opacity: 1;
+}
+.header-menu-panel li {
+  margin: 0.2rem 0;
 }
 
 /* CONTENT */
-#main {
-  margin-top: 8rem;
-}
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -93,6 +108,17 @@ ol {
   margin: 1%;
   padding: 0;
   width: 31.3%;
+}
+.see-more {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0;
+}
+.see-more a {
+  background-color: #D84483;
+  color: white;
+  padding: 0.5rem 1rem;
 }
 .post {
   background-color: white;
@@ -109,6 +135,10 @@ ol {
   justify-content: center;
   align-items: center;
 }
+.single .post-image,
+.list .post-image {
+  max-height: 300px;
+}
 .post img {
   width: 100%;
   height: auto;
@@ -116,7 +146,8 @@ ol {
 .post-title {
   margin: 0.5rem 0;
 }
-.post-date {
+.post-date,
+.reading-time {
   font-size: 14px;
   color: #666666;
   margin: 1rem 0;
@@ -126,12 +157,18 @@ ol {
   font-size: 14px;
 }
 
+.credits {
+  color: white;
+  font-size: 14px;
+  padding: 1rem;
+  display: inline-block;
+}
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.3)
+  background-color: rgba(255, 255, 255, 1);
 }
 .footer-menu {
   display: flex;
@@ -150,8 +187,13 @@ ol {
   }
 }
 @media (max-width: 420px) {
+  #logo {
+    width: 100%;
+    margin: 0;
+  }
   .gallery .item {
     width: 100%;
+    margin: 1% 0;
   }
   .footer {
     flex-direction: column;

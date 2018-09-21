@@ -4,10 +4,11 @@ theme = "xlab-tech"
 footnoteReturnLinkContents = "↩"
 
 [params]
-  SidebarRecentLimit = 5
-  Subtitle = "A permanent blog"
+  sidebarRecentLimit = 5
+  subtitle = "A permanent blog"
   description = "Everything is awesome!"
-  cover = "/images/xlab-cover.jpg"
+  cover = "/images/jason-wong-352463-unsplash.jpg"
+  coverCredit = "Photo by Jason Wong on Unsplash"
   [params.author]
     firstName = "xLab tech"
     lastName = "team"

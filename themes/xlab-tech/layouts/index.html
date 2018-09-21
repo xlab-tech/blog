@@ -1,9 +1,15 @@
 {{ define "main" }}
   <div class="post-list gallery">
-    {{ $paginator := .Paginate (where .Site.Pages "Section" "in" .Site.Params.mainSections) }}
-    {{ range $index, $page := $paginator.Pages }}
+    {{ range first 5 .Pages }}
       {{ .Render "li" }}
     {{ end }}
+    <div class="see-more">
+      <a href="{{ .Site.BaseURL }}posts/">See more <i class="fa fa-angle-right"></i></a>
+    </div>
   </div>
-  {{ partial "pagination.html" (dict "paginator" $paginator "site" .Site ) }}
+  <div class="credits">
+    <small>
+      {{ .Site.Params.coverCredit }}
+    </small>
+  </div>
 {{ end }}
