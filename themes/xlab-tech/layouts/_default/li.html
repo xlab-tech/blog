@@ -14,9 +14,6 @@
 		</span>
 		<h2 class="post-title">{{ .Title }}</h2>
 		<p class="post-excerpt">{{ .Summary }}</p>
-    {{ range $index, $key := .Keywords }}
-      {{ .index }}
-    {{ end }}
     {{ if .Truncated }}
 		  <span class="post-more"><a href="{{ .Permalink }}">Read more <i class="fa fa-angle-right"></i></a></span>
     {{ end }}
