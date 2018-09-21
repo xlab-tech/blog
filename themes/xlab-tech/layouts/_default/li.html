@@ -10,12 +10,12 @@
 		</figure>
 		{{ end }}
 		<span class="post-meta">
-			<span class="post-date">{{ .Date.Format "2 Jan 2006" }}</span>
+			<span class="post-date">{{ .Date.Format "2 Jan 2006" }}</span> <span class="reading-time">| <span class="estimated-reading-time">{{ .ReadingTime }} min.</span> (<span class="word-count">{{ .WordCount }}</span> words)</span></span>
 		</span>
 		<h2 class="post-title">{{ .Title }}</h2>
 		<p class="post-excerpt">{{ .Summary }}</p>
     {{ if .Truncated }}
-		  <span class="post-more"><a href="{{ .Permalink }}">Read more <i class="fa fa-angle-right"></i></a></span>
+		  <span class="post-more"><a href="{{ .Permalink }}">Leer más <i class="fa fa-angle-right"></i></a></span>
     {{ end }}
 	</div>
 </article>
