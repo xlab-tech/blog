@@ -1,0 +1,27 @@
+{
+  "name": "@xlab-tech/blog",
+  "version": "1.0.0",
+  "description": "blog xlab",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "index": "hugo-lunr-zh  -o themes/xlab-tech/static/js/lunr.json --matter-delims --- --matter-type yaml -d content -r"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xlab-tech/blog.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "vrubinat@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xlab-tech/blog/issues"
+  },
+  "homepage": "https://github.com/xlab-tech/blog#readme",
+  "devDependencies": {
+    "hugo-lunr-zh": "git+https://github.com/xlab-tech/hugo-lunr-zh.git"
+  },
+  "dependencies": {}
+}
