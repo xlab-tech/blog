@@ -21,7 +21,7 @@ install:
 # Build the website
 script:
   - npm run index
-  - hugo -b https://blog.xlab.tech -v
+  - hugo -b https://blog.xlab.tech/ -v
 
 deploy:
   provider: script
