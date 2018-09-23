@@ -29,4 +29,4 @@ deploy:
   bucket: "blog.xlab.tech"
   local_dir: public
   skip_cleanup: true
-  region: "eu-west-1"
+  region: eu-west-1
