@@ -22,10 +22,11 @@ install:
 script:
   - npm run index
   - hugo -b https://blog.xlab.tech -v
+  - pwd
 
 deploy:
   provider: script
-  script: npm run deploy
+  script: pwd && npm run deploy
   on:
     branch: master
 
