@@ -1,0 +1,22 @@
+# Install the apt prerequisites
+addons:
+  apt:
+    packages:
+      - python-pygments
+
+# Clean and don't fail
+install:
+  - rm -rf public || exit 0
+
+# Build the website
+script:
+  - npm run index
+  - ../binaries/hugo -b https://blog.xlab.tech -v
+
+deploy:
+  provider: s3
+  access_key_id: $AWS_ID
+  secret_access_key: $AWS_TOKEN
+  bucket: "blog.xlab.tech"
+  skip_cleanup: true
+  region: "eu-west-1"
