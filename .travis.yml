@@ -15,7 +15,7 @@ install:
   - rm -rf public || exit 0
   - wget https://github.com/gohugoio/hugo/releases/download/v0.48/hugo_0.48_Linux-64bit.deb
   - sudo dpkg -i hugo*.deb
-  - pip install awscli
+  - sudo pip install awscli
   - npm install
 
 # Build the website
