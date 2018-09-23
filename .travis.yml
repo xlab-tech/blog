@@ -15,6 +15,7 @@ install:
   - rm -rf public || exit 0
   - wget https://github.com/gohugoio/hugo/releases/download/v0.48/hugo_0.48_Linux-64bit.deb
   - sudo dpkg -i hugo*.deb
+  - pip install awscli
   - npm install
 
 # Build the website
@@ -24,11 +25,16 @@ script:
 
 deploy:
   provider: s3
-  access_key_id: "$AWS_ID"
-  secret_access_key: "$AWS_TOKEN"
-  bucket: "blog.xlab.tech"
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: blog.xlab.tech
   local_dir: public
   skip_cleanup: true
-  region: eu-west-1
   on:
     branch: master
+
+after_deploy:
+  # Allow `awscli` to make requests to CloudFront.
+  - aws configure set preview.cloudfront true
+  # Invalidate every object in the targeted distribution.
+  - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
