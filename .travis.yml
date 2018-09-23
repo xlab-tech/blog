@@ -1,15 +1,22 @@
 # Install the apt prerequisites
+language: node_js
+node_js:
+  - node
 addons:
   apt:
     packages:
       - python-pygments
-
+cache:
+  directories:
+    - "node_modules"
+    
 # Clean and don't fail
 install:
   - rm -rf public || exit 0
 
 # Build the website
 script:
+  - npm install
   - npm run index
   - ../binaries/hugo -b https://blog.xlab.tech -v
 
