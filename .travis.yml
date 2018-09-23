@@ -13,12 +13,12 @@ cache:
 # Clean and don't fail
 install:
   - rm -rf public || exit 0
-
-# Build the website
-script:
   - wget -qO- https://api.github.com/repos/gohugoio/hugo/releases/latest | sed -r -n '/browser_download_url/{/Linux-64bit.deb/{s@[^:]*:[[:space:]]*"([^"]*)".*@\1@g;p}}' | xargs wget
   - sudo dpkg -i hugo*.deb
   - npm install
+
+# Build the website
+script:
   - npm run index
   - hugo -b https://blog.xlab.tech -v
 
