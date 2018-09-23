@@ -24,12 +24,8 @@ script:
   - hugo -b https://blog.xlab.tech -v
 
 deploy:
-  provider: s3
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: blog.xlab.tech
-  local_dir: public
-  skip_cleanup: true
+  provider: script
+  script: aws s3 cp ./public s3://blog.xlab.tech --recursive
   on:
     branch: master
 
