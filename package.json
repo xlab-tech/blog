@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "index": "hugo-lunr-zh  -o themes/xlab-tech/static/js/lunr.json --matter-delims --- --matter-type yaml -d content -r"
+    "index": "hugo-lunr-zh  -o themes/xlab-tech/static/js/lunr.json --matter-delims --- --matter-type yaml -d content -r",
+    "deploy": "aws s3 cp ./public s3://blog.xlab.tech --recursive "
   },
   "repository": {
     "type": "git",
