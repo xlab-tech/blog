@@ -16,9 +16,11 @@ install:
 
 # Build the website
 script:
+  - wget -qO- https://api.github.com/repos/gohugoio/hugo/releases/latest | sed -r -n '/browser_download_url/{/Linux-64bit.deb/{s@[^:]*:[[:space:]]*"([^"]*)".*@\1@g;p}}' | xargs wget
+  - sudo dpkg -i hugo*.deb
   - npm install
   - npm run index
-  - binaries/hugo -b https://blog.xlab.tech -v
+  - hugo -b https://blog.xlab.tech -v
 
 deploy:
   provider: s3
