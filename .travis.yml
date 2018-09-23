@@ -30,3 +30,5 @@ deploy:
   local_dir: public
   skip_cleanup: true
   region: eu-west-1
+  on:
+    branch: master
