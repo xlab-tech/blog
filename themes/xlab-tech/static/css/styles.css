@@ -8,9 +8,9 @@ body {
   margin: 0;
 }
 body {
-  background-image: url('../images/jason-wong-352463-unsplash.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url('../images/pattern.png');
+  background-color: white;
+  background-repeat: repeat;
   background-position: center center;
   font-family: 'Roboto', sans-serif;
   font-size: 16PX;
@@ -187,8 +187,11 @@ ol {
   }
 }
 @media (max-width: 420px) {
+  .header {
+    margin-bottom: 0.2rem;
+  }
   #logo {
-    width: 100%;
+    display: block;
     margin: 0;
   }
   .gallery .item {
