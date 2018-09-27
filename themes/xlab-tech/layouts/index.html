@@ -1,6 +1,6 @@
 {{ define "main" }}
   <div class="post-list gallery">
-    {{ range first 5 .Pages }}
+    {{ range first 5 (where .Pages "Section" "posts") }}
       {{ .Render "li" }}
     {{ end }}
     <div class="see-more">

@@ -9,7 +9,6 @@
     } else {
       target.classList.remove("active");
     }
-    console.log();
   };
   
   let init = () => { 

@@ -6,24 +6,46 @@ buildExpired = false
 buildFuture = false
 buildDrafts = false
 
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About us"
+    url = "/topics/about/"
+    weight = 1
+  [[menu.main]]
+    identifier = "topics"
+    name = "Topics"
+    url = "/topics/"
+    weight = 2
+  [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 3
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 4
+
 [params]
+  favicon = "images/favicon.ico"
   sidebarRecentLimit = 5
   subtitle = "A permanent blog"
   description = "Everything is awesome!"
-  cover = "/images/jason-wong-352463-unsplash.jpg"
-  coverCredit = "Photo by Jason Wong on Unsplash"
+  website = ""
+  twitter = "https://twitter.com/xlabtech/"
+  github = "https://github.com/xlab-tech/"
+  facebook = ""
+  linkedin = ""
+  gplus = ""
+  instagram = "https://www.instagram.com/xlabtech/"
   [params.author]
-    firstName = "xLab tech"
-    lastName = "team"
+    firstName = "xLab Tech"
+    lastName = "Team"
     gender = "(fe)?male"
     userName = "xLab-tech-team"
-    image = "/images/avatar.jpg"
-    website = "https://xlab.tech"
-    twitter = ""
-    github = "https://github.com/xlab-tech"
-    facebook = ""
-    linkedin = ""
-    gplus = ""
+    image = "/images/xlab-avatar.jpg"
 
 [permalinks]
   post = "/:year/:month/:title/"
@@ -31,4 +53,5 @@ buildDrafts = false
 [taxonomies]
   category = "categories"
   tag = "tags"
+  topic = "topics"
   

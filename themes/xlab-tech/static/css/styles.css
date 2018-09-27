@@ -50,6 +50,13 @@ ol {
 }
 
 /* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+}
+.socials {
+  margin-left: 2rem;
+}
 #logo {
   display: inline-block;
   margin: 1%;
@@ -125,6 +132,13 @@ ol {
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
   padding: 1rem;
 }
+.post.single {
+  display: flex;
+}
+.post .aside {
+  min-width: 20%;
+  margin: 3rem 1rem;
+}
 .post-inner {
   margin: 1rem;
 }
@@ -155,6 +169,36 @@ ol {
 }
 .post-more {
   font-size: 14px;
+}
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.post-nav img {
+  width: 10px;
+}
+.post-nav-title {
+  font-size: 14px;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0; 
+  padding: 0;
+}
+.tags li {
+  background: #dedede;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+}
+.tags li:not(:first-child) {
+  margin-left: 0.5rem;
+}
+.tags a {
+  font-size: 12px;
 }
 
 .credits {
@@ -188,7 +232,11 @@ ol {
 }
 @media (max-width: 420px) {
   .header {
-    margin-bottom: 0.2rem;
+    display: block;
+    text-align: center;
+  }
+  .socials {
+    margin: 1rem auto 0.5rem auto;
   }
   #logo {
     display: block;
@@ -197,6 +245,13 @@ ol {
   .gallery .item {
     width: 100%;
     margin: 1% 0;
+  }
+  .post.single {
+    flex-direction: column;
+  }
+  .post .aside {
+    min-width: 100%;
+    margin: 0;
   }
   .footer {
     flex-direction: column;

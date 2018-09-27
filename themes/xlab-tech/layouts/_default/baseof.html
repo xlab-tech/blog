@@ -9,6 +9,8 @@
         {{ .Site.Title }}
       </title>
     {{ end }}
+    <link rel="shortcut icon" href="/{{ .Site.Params.favicon }}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}/images/icon.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/styles.css">
   </head>

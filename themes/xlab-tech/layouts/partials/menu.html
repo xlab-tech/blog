@@ -1,32 +1,16 @@
+{{ if .Site.Menus.main }}
 <nav class="header-menu">
   <a href="" id="header-menu-btn" class="header-menu-btn">
     <img src="/images/icon-menu.svg" alt="Menu" width="31" height="24">
   </a>
   <ul id="header-menu-panel" class="header-menu-panel">
+    {{ range .Site.Menus.main }}
     <li>
-      <a href="/about-us.html">
-        About us
+      <a href="{{ .URL }}">
+        {{ .Name }}
       </a>
     </li>
-    <li>
-      <a href="https://xlab.tech">
-        xLab
-      </a>
-    </li>
-    <li>
-      <a href="/categories">
-        Categorias
-      </a>
-    </li>
-    <li>
-      <a href="/tags">
-        Tags
-      </a>
-    </li>
-    <li>
-      <a href="/search">
-        Search
-      </a>
-    </li>
+    {{ end }}
   </ul>
 </nav>
+{{ end }}

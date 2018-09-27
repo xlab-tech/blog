@@ -4,7 +4,7 @@ description: Lookup articles of interest.
 comments: false
 type: page
 menu: main
-weight: -170
+weight: 5
 ---
 
 <p><input id="search" type="text" placeholder="Escribe lo que quieres buscar"></p>

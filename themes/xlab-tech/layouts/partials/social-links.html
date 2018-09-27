@@ -1,0 +1,36 @@
+{{ $icon_size := "40" }}
+{{ with .Param "website" }}
+  <a href="{{ . }}" target="_blank">
+    <img src="/images/website.svg" alt="Website" title="Website" width="{{ $icon_size }}" height="{{ $icon_size }}">
+  </a>
+{{ end }}
+{{ with .Param "github" }}
+  <a href="{{ . }}" target="_blank">
+    <img src="/images/github.svg" alt="Github" title="Github" width="{{ $icon_size }}" height="{{ $icon_size }}">
+  </a>
+{{ end }}
+{{ with .Param "linkedin" }}
+  <a href="{{ . }}" target="_blank">
+    <img src="/images/linkedin.svg" alt="Linkedin" title="Linkedin" width="{{ $icon_size }}" height="{{ $icon_size }}">
+  </a>
+{{ end }}
+{{ with .Param "twitter" }}
+  <a href="{{ . }}" target="_blank">
+    <img src="/images/twitter.svg" alt="Twitter" title="Twitter" width="{{ $icon_size }}" height="{{ $icon_size }}">
+  </a>
+{{ end }}
+{{ with .Param "instagram" }}
+  <a href="{{ . }}" target="_blank">
+    <img src="/images/instagram.svg" alt="Instagram" title="Instagram" width="{{ $icon_size }}" height="{{ $icon_size }}">
+  </a>
+{{ end }}
+{{ with .Param "facebook" }}
+  <a href="{{ . }}" target="_blank">
+    <img src="/images/facebook.svg" alt="Facebook" title="Facebook" width="{{ $icon_size }}" height="{{ $icon_size }}">
+  </a>
+{{ end }}
+{{ with .Param "gplus" }}
+  <a href="{{ . }}" target="_blank">
+    <img src="/images/gplus.svg" alt="Gplus" title="Gplus" width="{{ $icon_size }}" height="{{ $icon_size }}">
+  </a>
+{{ end }}
