@@ -1,7 +1,7 @@
 ---
 title: "Aniversario"
 date: 2018-09-27T16:28:43+02:00
-draft: true
+draft: false
 topics: ["about"]
 image: "jason-wong-352463-unsplash.jpg"
 imageAlt: "About us"

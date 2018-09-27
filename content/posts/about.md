@@ -1,7 +1,7 @@
 ---
 title: "About Us"
 date: 2018-09-20T14:26:15+02:00
-draft: true
+draft: false
 tags: ["tag2"]
 categories: ["cat1", "cat2"]
 topics: ["about"]
