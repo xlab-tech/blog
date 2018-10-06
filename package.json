@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "index": "hugo-lunr-zh  -o themes/xlab-tech/static/js/lunr.json --matter-delims --- --matter-type yaml -d content -r",
     "build": "hugo -b https://blog.xlab.tech/ -v",
-    "deploy": "npm run build && aws s3 cp ./public s3://blog.xlab.tech --recursive "
+    "deploy": "npm run build && aws s3 cp ./public s3://blog.xlab.tech --recursive ",
+    "start": "hugo server -D"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/xlab-tech/blog#readme",
   "devDependencies": {
+    "hugo": "0.0.3",
     "hugo-lunr-zh": "git+https://github.com/xlab-tech/hugo-lunr-zh.git"
   },
   "dependencies": {}
